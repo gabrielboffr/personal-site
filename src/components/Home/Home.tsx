@@ -1,3 +1,5 @@
+import { Button } from "../ui/button";
+
 const Home = () => {
   return (
     <div className="flex flex-col items-center bg-background text-slate-100 p-4 gap-6">
@@ -11,25 +13,7 @@ const Home = () => {
         </p>
       </div>
       <div className="flex flex-row gap-8">
-        <button>
-          <a className="" href="#">
-            Ver Projetos
-          </a>
-        </button>
-        <button>
-          <a
-            className=""
-            href="https://linkedin.com/in/gabrielboffr"
-            target="blank"
-          >
-            LinkedIn
-          </a>
-        </button>
-        <button>
-          <a className="" href="https://github.com/gabrielboffr" target="blank">
-            GitHub
-          </a>
-        </button>
+        <Button>Teste</Button>
       </div>
     </div>
   );
