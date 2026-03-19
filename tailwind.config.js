@@ -13,6 +13,7 @@ module.exports = {
         border: "#262632",
         foreground: "#F5F5F5",
         muted: "#A1A1AA",
+        secondary: "#0f172a",
         primary: {
           default: "#3B82F6",
           strong: "#2563EB",
