@@ -11,6 +11,9 @@ const Navbar = () => {
   ];
   return (
     <nav className="flex gap-8 justify-center p-4 bg-transparent text-slate-100">
+      <div>
+        <img src="../../assets/icons/icon.png" alt="" />
+      </div>
       {navItems.map((item) => (
         <a
           key={item}
