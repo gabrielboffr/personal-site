@@ -53,7 +53,7 @@ const cardDescription = [
 
 const About = () => {
   return (
-    <section id="about" className="h-full flex flex-col items-center gap-16">
+    <section id="sobre" className="h-full flex flex-col items-center gap-16">
       <h1 className="text-7xl font-extrabold bg-clip-text bg-linear-to-r from-white to-blue-600 text-transparent text-shadow-primary-glow text-shadow-8xs">
         Sobre <span className=" ">mim</span>
       </h1>

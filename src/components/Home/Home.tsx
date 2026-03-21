@@ -114,8 +114,7 @@ const Home = () => {
       variants={heroContainer}
       initial="hidden"
       animate="visible"
-      id="home"
-      className="flex items-center justify-center bg-transparent text-slate-100 px-16 gap-12 h-[calc(100vh-74px)] w-5/6 mx-auto"
+      className="flex items-center justify-center bg-transparent text-slate-100 px-16 gap-12 h-[calc(100vh)] w-5/6 mx-auto"
     >
       <div className="flex flex-col gap-2 w-full">
         <div className="bg-transparent border border-blue-500/50 rounded-2xl px-4 py-1.5 w-min text-nowrap font-semibold text-xs text-primary-soft tracking-[0.2rem] shadow-glow">
@@ -138,7 +137,7 @@ const Home = () => {
           </motion.span>
         </motion.h1>
         <div className="flex flex-col w-9/12 gap-4">
-          <p className="text-xl font-medium text-white text-shadow-code-props text-shadow-2xs text-justify">
+          <p className="text-xl font-medium text-white text-shadow-2xs text-justify">
             Eu sou Gabriel Boff, desenvolvedor em formação, focado em criar
             aplicações web com performance, usabilidade e código limpo.
           </p>
