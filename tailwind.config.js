@@ -40,8 +40,8 @@ module.exports = {
           "radial-gradient(circle at 50% 50%, rgba(59,130,246,0.4), rgba(37,99,235,0.1), transparent 70%)",
       },
       boxShadow: {
-        glow: "0 0 30px rgba(59,130,246,0.4)",
-        "glow-strong": "0 0 50px rgba(59,130,246,0.6)",
+        glow: "0 0 16px rgba(59,130,246,0.2)",
+        "glow-strong": "0 0 32px rgba(59,130,246,0.4)",
       },
     },
   },

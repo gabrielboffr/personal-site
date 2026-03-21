@@ -1,2 +1,35 @@
 @config "../tailwind.config.js";
 @import "tailwindcss";
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes socialWave {
+  0%,
+  70%,
+  100% {
+    transform: translateY(0);
+  }
+  8% {
+    transform: translateY(-10px);
+  }
+  16% {
+    transform: translateY(0);
+  }
+}
+
+.social-wave {
+  animation: socialWave 4s ease-in-out infinite;
+  will-change: transform;
+}
