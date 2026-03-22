@@ -17,7 +17,7 @@ export function CodeTyping({ code }: Props) {
 
   const lineTexts = useMemo(
     () => code.map((line) => line.map((token) => token.text).join("")),
-    [code]
+    [code],
   );
 
   useEffect(() => {

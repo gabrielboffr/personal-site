@@ -1,20 +1,22 @@
-# React + TypeScript + Vite
+# 🚀 Gabriel Boff Raupp - Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Meu portfólio pessoal com informações sobre minha trajetória profissional e tecnologias que utilizo.
 
-Currently, two official plugins are available:
+> 🌱 **Este é apenas o começo da minha jornada como desenvolvedor.** Estou constantemente aprendendo, crescendo e construindo coisas legais.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 💡 Sobre Mim
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Sou um desenvolvedor apaixonado por criar experiências digitais limpas e intuitivas. Acredito que bom código é aquele que é legível, sustentável e resolve problemas reais.
 
-## Expanding the ESLint configuration
+Neste portfólio você vai encontrar:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- 🎨 Meus projetos e trabalhos
+- 📚 As tecnologias que mais gosto
+- 💬 Um canal direto para conversar
 
+<<<<<<< HEAD
 ```js
 export default defineConfig([
   globalIgnores(['dist']),
@@ -22,14 +24,13 @@ export default defineConfig([
     files: ['**/*.{ts,tsx}'],
     extends: [
       // Other configs...
+=======
+---
+>>>>>>> 6f5e446 (finishing project)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🛠 Tecnologias Utilizadas
 
+<<<<<<< HEAD
       // Other configs...
     ],
     languageOptions: {
@@ -42,9 +43,13 @@ export default defineConfig([
   },
 ])
 ```
+=======
+**Frontend:** React, TypeScript, Tailwind CSS, Framer Motion
+>>>>>>> 6f5e446 (finishing project)
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+**Backend:** Node.js, Resend (Envio de Email), Zod (Validação)
 
+<<<<<<< HEAD
 ```js
 // eslint.config.js
 import reactX from 'eslint-plugin-react-x'
@@ -71,3 +76,28 @@ export default defineConfig([
   },
 ])
 ```
+=======
+---
+
+## 🎯 Destaques
+
+✨ Design responsivo e intuitivo  
+🔒 Segurança em mente (validação, rate limiting, honeypot)  
+⚡ Performance otimizada  
+📝 Código limpo e bem documentado
+
+---
+
+## 📬 Contato
+
+Quer conversar, colaborar ou apenas bater um papo?
+
+- 📧 [Gmail](mailto:gabrielbraupp@gmail.com)
+- 💼 [LinkedIn](https://linkedin.com/in/gabrielboffr)
+- 🐙 [GitHub](https://github.com/gabrielboffr)
+- 🌐 [Site](https://gabrielboffr.dev)
+
+---
+
+**Desenvolvido com ❤️ por Gabriel Boff Raupp**
+>>>>>>> 6f5e446 (finishing project)

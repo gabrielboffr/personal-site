@@ -5,7 +5,7 @@ import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   return (
-    <div className="bg-gradient-dark h-full bg-fixed py-4 px-8">
+    <div className="min-h-screen bg-gradient-dark py-4 px-4 sm:px-6 md:bg-fixed md:px-8">
       <Navbar />
       <Home />
       <About />

@@ -1,6 +1,13 @@
 @config "../tailwind.config.js";
 @import "tailwindcss";
 
+html,
+body,
+#root {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 @keyframes float {
   0%,
   100% {
@@ -32,4 +39,10 @@
 .social-wave {
   animation: socialWave 4s ease-in-out infinite;
   will-change: transform;
+}
+
+@media (max-width: 768px) {
+  code {
+    font-size: 0.78rem;
+  }
 }
