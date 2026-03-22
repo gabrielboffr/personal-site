@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#020617"/>
+      <stop offset="60%" stop-color="#0B0B0F"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="tx" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#93C5FD"/>
+      <stop offset="100%" stop-color="#2563EB"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="930" cy="80" r="260" fill="#1d4ed8" opacity="0.18"/>
+  <circle cx="250" cy="590" r="280" fill="#38bdf8" opacity="0.14"/>
+  <rect x="90" y="90" width="1020" height="450" rx="30" fill="#0b1120" opacity="0.6"/>
+  <text x="140" y="250" fill="#e2e8f0" font-size="72" font-family="Arial, sans-serif" font-weight="700">Gabriel Boff Raupp</text>
+  <text x="140" y="330" fill="url(#tx)" font-size="52" font-family="Arial, sans-serif" font-weight="700">Desenvolvedor Full Stack</text>
+  <text x="140" y="400" fill="#cbd5e1" font-size="34" font-family="Arial, sans-serif">Portfólio com projetos, experiência e tecnologias.</text>
+  <text x="140" y="470" fill="#93c5fd" font-size="30" font-family="Arial, sans-serif">gabrielboffr.dev</text>
+</svg>

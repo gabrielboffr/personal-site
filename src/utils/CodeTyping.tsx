@@ -61,7 +61,7 @@ export function CodeTyping({ code }: Props) {
   }
 
   return (
-    <div className="relative rounded-3xl border border-white/10 bg-[#050505]/80 overflow-hidden shadow-2xl group w-full">
+    <div className="group relative w-full overflow-hidden rounded-3xl border border-white/10 bg-[#050505]/80 shadow-2xl">
       <div className="flex justify-between h-8 bg-surface p-6">
         <div className="flex gap-2 items-center">
           <div className="rounded-full h-3 w-3 bg-red-400"></div>
@@ -75,8 +75,8 @@ export function CodeTyping({ code }: Props) {
         </div>
       </div>
 
-      <code>
-        <div className="bg-background p-8 font-mono">
+      <code className="block max-w-full overflow-hidden">
+        <div className="w-full bg-background p-5 font-mono text-xs sm:text-base sm:p-8">
           {code.map((line, i) => {
             const isPastLine = i < visibleLines;
             const isCurrentLine = i === visibleLines;
@@ -84,12 +84,12 @@ export function CodeTyping({ code }: Props) {
             if (!isPastLine && !isCurrentLine) return null;
 
             return (
-              <div key={i} className="flex min-h-7">
-                <div className="pl-4 text-right mr-6 line-number select-none italic opacity-20 w-10">
+              <div key={i} className="flex items-start">
+                <div className="text-right mr-6 line-number select-none italic opacity-20 sm:w-10 sm:pl-4">
                   {String(i + 1).padStart(2, "0")}
                 </div>
 
-                <div>
+                <div className="min-w-0 flex-1 whitespace-pre-wrap wrap-break-word">
                   {isPastLine &&
                     line.map((token, j) => (
                       <span key={j} className={token.className}>
@@ -100,7 +100,7 @@ export function CodeTyping({ code }: Props) {
                   {isCurrentLine && (
                     <>
                       {renderTypedLine(line, visibleChars)}
-                      <span className="inline-block w-2 h-[1.1em] ml-0.5 translate-y-0.5 bg-blue-400 animate-pulse" />
+                      <span className="inline-block h-[1.1em] w-2 translate-y-0.5 ml-0.5 bg-blue-400 animate-pulse" />
                     </>
                   )}
                 </div>

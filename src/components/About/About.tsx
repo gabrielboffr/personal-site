@@ -53,30 +53,33 @@ const aboutCards = [
 
 const About = () => {
   return (
-    <section id="sobre" className="h-full flex flex-col items-center gap-16">
-      <h1 className="text-7xl font-extrabold bg-clip-text bg-linear-to-r from-white to-blue-600 text-transparent text-shadow-primary-glow text-shadow-8xs">
+    <section
+      id="sobre"
+      className="mx-auto flex w-full max-w-7xl flex-col items-center gap-8 px-2 py-8 sm:px-4 md:gap-10 lg:gap-16"
+    >
+      <h1 className="text-center text-4xl font-extrabold bg-clip-text bg-linear-to-r from-white to-blue-600 text-transparent text-shadow-primary-glow text-shadow-8xs sm:text-5xl lg:text-7xl">
         Sobre mim
       </h1>
-      <div className="flex justify-center w-full gap-32">
+      <div className="flex w-full flex-col items-center justify-center gap-8 lg:flex-row lg:items-start lg:gap-16 xl:gap-24">
         <motion.div
           initial={{ opacity: 0, scale: 0.7 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           whileHover={{ rotateX: 5, rotateY: -5, scale: 1.07 }}
-          className="relative my-auto"
+          className="relative my-auto w-full max-w-xs sm:max-w-sm lg:max-w-md"
         >
           <div className="absolute inset-0 rounded-3xl bg-cyan-400/20 blur-3xl scale-110" />
 
-          <div className="relative w-lg aspect-square overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-sm animate-float">
+          <div className="animate-float relative aspect-square w-full overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-sm">
             <img
               src={graduation}
               alt="Gabriel Boff Raupp"
-              className="w-full object-cover"
+              className="h-full w-full object-cover object-top"
             />
           </div>
         </motion.div>
-        <div className="flex flex-col justify-center w-1/2 gap-8">
+        <div className="flex w-full flex-col justify-center gap-6 lg:w-1/2 lg:gap-8">
           <motion.div
             variants={textVariant}
             initial="hidden"
@@ -92,7 +95,7 @@ const About = () => {
               className="h-1 rounded-full bg-blue-400 mb-6 shadow-[0_0_20px_rgba(96,165,250,0.7)]"
             />
 
-            <p className="text-white font-medium text-xl text-justify leading-9">
+            <p className="text-white font-medium text-base leading-7 text-left sm:text-lg sm:leading-8 lg:text-xl lg:leading-9 lg:text-justify">
               Eu sou{" "}
               <span className="text-blue-400 font-bold">
                 Gabriel Boff Raupp
@@ -109,13 +112,13 @@ const About = () => {
               construir soluções e dar vida a ideias.
             </p>
           </motion.div>
-          <div className="mx-auto">
+          <div className="w-full">
             <motion.div
               variants={cardsContainer}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.4 }}
-              className="grid gap-6 grid-cols-2"
+              className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6"
             >
               {aboutCards.map((card, index) => {
                 const Icon = card.icon;
@@ -124,19 +127,23 @@ const About = () => {
                   <motion.div
                     key={index}
                     variants={cardVariant}
-                    className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/3 p-7 shadow-[0_0_30px_rgba(59,130,246,0.08)] backdrop-blur-sm hover:border-blue-400/20"
+                    className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/3 p-5 shadow-[0_0_30px_rgba(59,130,246,0.08)] backdrop-blur-sm hover:border-blue-400/20 sm:p-7"
                   >
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.18),transparent_35%)] opacity-70" />
                     <div className="absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100 bg-[linear-gradient(135deg,rgba(59,130,246,0.08),transparent,rgba(34,211,238,0.08))]" />
 
-                    <span className="absolute right-6 top-5 text-6xl font-black tracking-tight text-white/5">
+                    <span className="absolute right-5 top-4 text-5xl font-black tracking-tight text-white/5 sm:right-6 sm:top-5 sm:text-6xl">
                       0{index + 1}
                     </span>
 
                     <div className="relative z-10">
-                      <div className="mb-6 flex items-start justify-between gap-4">
-                        <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-blue-400/20 bg-blue-500/10 text-blue-400">
-                          <Icon size={28} strokeWidth={2.2} />
+                      <div className="mb-5 flex items-start justify-between gap-3 sm:mb-6 sm:gap-4">
+                        <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-blue-400/20 bg-blue-500/10 text-blue-400 sm:h-14 sm:w-14">
+                          <Icon
+                            size={24}
+                            strokeWidth={2.2}
+                            className="sm:h-7 sm:w-7"
+                          />
                         </div>
 
                         <span className="rounded-full border border-border bg-white/5 px-3 py-1 text-xs font-medium text-code-props/60">
@@ -144,7 +151,7 @@ const About = () => {
                         </span>
                       </div>
 
-                      <h3 className="text-2xl font-bold text-white">
+                      <h3 className="text-xl font-bold text-white sm:text-2xl">
                         {card.title}
                       </h3>
 

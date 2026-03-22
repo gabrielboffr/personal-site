@@ -114,17 +114,17 @@ const Home = () => {
       variants={heroContainer}
       initial="hidden"
       animate="visible"
-      className="flex items-center justify-center bg-transparent text-slate-100 px-16 gap-12 h-[calc(100vh)] w-5/6 mx-auto"
+      className="mx-auto flex w-full max-w-7xl flex-col items-center justify-center gap-8 bg-transparent px-4 py-16 text-slate-100 sm:px-6 md:px-10 lg:h-[calc(100vh)] lg:w-5/6 lg:flex-row lg:gap-12"
     >
-      <div className="flex flex-col gap-2 w-full">
-        <div className="bg-transparent border border-blue-500/50 rounded-2xl px-4 py-1.5 w-min text-nowrap font-semibold text-xs text-primary-soft tracking-[0.2rem] shadow-glow">
+      <div className="order-2 flex w-full flex-col gap-2 lg:order-1 lg:flex-1">
+        <div className="w-fit rounded-2xl border border-blue-500/50 bg-transparent px-4 py-1.5 text-nowrap text-xs font-semibold tracking-widest lg:tracking-[0.2rem] text-primary-soft shadow-glow mx-auto sm:mx-0">
           BEM VINDO AO MEU PORTFÓLIO
         </div>
         <motion.h1
           variants={heroItem}
           initial="hidden"
           animate="visible"
-          className="text-7xl font-extrabold mb-4"
+          className="mb-3 text-4xl leading-tight font-extrabold sm:text-5xl lg:mb-4 lg:text-7xl"
         >
           Construindo{" "}
           <motion.span
@@ -136,15 +136,15 @@ const Home = () => {
             Experiências Digitais
           </motion.span>
         </motion.h1>
-        <div className="flex flex-col w-9/12 gap-4">
-          <p className="text-xl font-medium text-white text-shadow-2xs text-justify">
+        <div className="flex w-full flex-col gap-4 lg:w-10/12">
+          <p className="text-base font-medium text-white text-shadow-2xs sm:text-lg lg:text-xl lg:text-justify">
             Eu sou Gabriel Boff, desenvolvedor em formação, focado em criar
             aplicações web com performance, usabilidade e código limpo.
           </p>
-          <div className="flex gap-4">
+          <div className="flex flex-wrap gap-3 sm:gap-4">
             {socialLinks.map((item, i) => (
               <a
-                className="social-wave bg-surface/80 p-2 rounded-2xl border border-border duration-300 hover:scale-110"
+                className="social-wave rounded-2xl border border-border bg-surface/80 p-2 duration-300 hover:scale-110"
                 href={item.link}
                 target="_blank"
                 style={{ animationDelay: item.animationDelay }}
@@ -154,7 +154,7 @@ const Home = () => {
               </a>
             ))}
           </div>
-          <div className="flex gap-8 items-center justify-between">
+          <div className="flex flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
             {buttons.map((button, i) => (
               <motion.a
                 whileHover={{
@@ -163,7 +163,7 @@ const Home = () => {
                   fontWeight: "medium",
                 }}
                 whileTap={{ scale: 0.85 }}
-                className="text-xs bg-indigo-500 p-3 rounded-xl text-center tracking-widest w-full shadow-glow-strong text-nowrap duration-200 text-code-props"
+                className="w-full rounded-xl bg-indigo-500 p-3 text-center text-[11px] tracking-[0.14rem] text-code-props shadow-glow-strong duration-200 sm:text-xs sm:tracking-widest"
                 href={button.link}
                 key={i}
               >
@@ -176,7 +176,9 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <CodeTyping code={code} />
+      <div className="order-1 w-full lg:order-2 lg:flex-1">
+        <CodeTyping code={code} />
+      </div>
     </motion.section>
   );
 };

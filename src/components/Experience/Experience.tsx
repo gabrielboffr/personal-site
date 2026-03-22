@@ -52,7 +52,10 @@ const Experience = () => {
     },
   ];
   return (
-    <section id="experiencia" className="relative mt-24 overflow-hidden py-24">
+    <section
+      id="experiencia"
+      className="relative mt-16 lg:mt-24 overflow-hidden lg:py-24"
+    >
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 hidden lg:block"
@@ -76,11 +79,11 @@ const Experience = () => {
       </div>
 
       <div className="relative z-10 mx-auto max-w-7xl px-6">
-        <div className="mb-14 text-right mr-16 w-max mx-auto">
-          <h2 className="text-7xl font-extrabold bg-clip-text bg-linear-to-l from-white to-blue-600 text-transparent">
+        <div className="mb-6 text-center lg:mb-14 lg:text-right lg:mr-16 lg:w-max lg:mx-auto">
+          <h2 className="text-4xl font-extrabold bg-clip-text bg-linear-to-l from-white to-blue-600 text-transparent sm:text-5xl lg:text-7xl">
             Minha jornada
           </h2>
-          <p className="mt-4 text-lg text-zinc-400">
+          <p className="mt-2 lg:mt-4 text-xs sm:text-xs lg:text-lg text-zinc-400">
             Um resumo da minha trajetória e experiências na tecnologia.
           </p>
         </div>
@@ -237,20 +240,22 @@ const Experience = () => {
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(34,211,238,0.08),transparent_25%)]" />
 
                     <div className="relative z-10">
-                      <h3 className="text-3xl font-extrabold tracking-tight text-white">
+                      <h3 className="text-2xl lg:text-left lg:text-3xl font-extrabold tracking-tight text-white">
                         {card.title}
                       </h3>
 
                       <div className="mt-3 flex items-center gap-3 text-blue-400">
                         <Building2 size={18} />
-                        <p className="text-xl font-semibold">{card.company}</p>
+                        <p className="text-lg  lg:text-xl font-semibold">
+                          {card.company}
+                        </p>
                       </div>
 
-                      <ul className="mt-8 space-y-4">
+                      <ul className="mt-8 space-y-2 lg:space-y-4">
                         {card.description.map((item, itemIndex) => (
                           <li
                             key={itemIndex}
-                            className="flex items-start gap-1 text-base text-code-props/90"
+                            className="flex items-start gap-1 text-sm lg:text-base text-code-props/90"
                           >
                             <ChevronRight
                               size={20}
