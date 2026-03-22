@@ -1,5 +1,5 @@
 import { Icon } from "@/assets";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 
 const navItems = ["Sobre", "Experiência", "Tecnologias", "Projetos", "Contato"];
@@ -16,6 +16,7 @@ const Navbar = () => {
   const { scrollY } = useScroll();
   const [scrolled, setScrolled] = useState(false);
   const sectionIds = useMemo(() => navItems.map(getSectionId), []);
+  const visibilityRatiosRef = useRef<Record<string, number>>({});
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     setScrolled(latest > 20);
@@ -32,20 +33,21 @@ const Navbar = () => {
 
     const observer = new IntersectionObserver(
       (entries) => {
-        const visibleEntries = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+        entries.forEach((entry) => {
+          visibilityRatiosRef.current[entry.target.id] = entry.isIntersecting
+            ? entry.intersectionRatio
+            : 0;
+        });
 
-        if (visibleEntries.length > 0) {
-          setActive(visibleEntries[0].target.id);
-          return;
-        }
+        const nextActive = Object.entries(visibilityRatiosRef.current)
+          .sort((a, b) => b[1] - a[1])
+          .find(([, ratio]) => ratio > 0)?.[0];
 
-        setActive("");
+        setActive(nextActive ?? "");
       },
       {
-        rootMargin: "-25% 0px -25% 0px",
-        threshold: [0, 0.02, 0.15],
+        rootMargin: "-40% 0px -40% 0px",
+        threshold: [0, 0.02, 0.5],
       },
     );
 
@@ -58,12 +60,12 @@ const Navbar = () => {
     <motion.nav
       initial={false}
       animate={{
-        backgroundColor: scrolled ? "rgba(0, 0, 0, 0.8)" : "rgba(5, 5, 5, 0)",
+        backgroundColor: scrolled ? "transparent" : "rgba(5, 5, 5, 0)",
         backdropFilter: scrolled ? "blur(6px)" : "blur(0px)",
         paddingBlock: scrolled ? "8px" : "16px",
       }}
       transition={{ duration: 0.3, ease: "easeOut" }}
-      className="flex gap-8 justify-between px-32 bg-transparent text-slate-100 fixed w-full z-1 -my-4 -mx-8 py-4"
+      className="fixed inset-x-0 top-0 z-50 flex justify-between gap-8 bg-transparent px-8 py-4 text-slate-100 lg:px-32"
     >
       <a href="#">
         <Icon
