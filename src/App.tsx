@@ -1,11 +1,17 @@
-import About from "./components/About/About";
-import Contact from "./components/Contact/Contact";
+import { Suspense, lazy } from "react";
 import CustomCursor from "./components/CustomCursor/CustomCursor";
-import Experience from "./components/Experience/Experience";
-import Footer from "./components/Footer/Footer";
 import Home from "./components/Home/Home";
 import Navbar from "./components/Navbar/Navbar";
-import Tech from "./components/Tech/Tech";
+
+const About = lazy(() => import("./components/About/About"));
+const Experience = lazy(() => import("./components/Experience/Experience"));
+const Tech = lazy(() => import("./components/Tech/Tech"));
+const Contact = lazy(() => import("./components/Contact/Contact"));
+const Footer = lazy(() => import("./components/Footer/Footer"));
+
+const SectionFallback = () => (
+  <section className="mx-auto mt-8 h-24 w-full max-w-7xl animate-pulse rounded-2xl border border-white/8 bg-white/3" />
+);
 
 function App() {
   return (
@@ -13,11 +19,13 @@ function App() {
       <CustomCursor />
       <Navbar />
       <Home />
-      <About />
-      <Experience />
-      <Tech />
-      <Contact />
-      <Footer />
+      <Suspense fallback={<SectionFallback />}>
+        <About />
+        <Experience />
+        <Tech />
+        <Contact />
+        <Footer />
+      </Suspense>
     </div>
   );
 }
