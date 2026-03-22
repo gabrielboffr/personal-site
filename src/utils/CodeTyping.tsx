@@ -61,7 +61,7 @@ export function CodeTyping({ code }: Props) {
   }
 
   return (
-    <div className="group relative w-full overflow-hidden rounded-3xl border border-white/10 bg-[#050505]/80 shadow-2xl">
+    <div className="group relative w-full overflow-hidden rounded-3xl border border-white/10 bg-[#050505]/80 shadow-2xl min-h-54.5">
       <div className="flex justify-between h-8 bg-surface p-6">
         <div className="flex gap-2 items-center">
           <div className="rounded-full h-3 w-3 bg-red-400"></div>
@@ -76,7 +76,7 @@ export function CodeTyping({ code }: Props) {
       </div>
 
       <code className="block max-w-full overflow-hidden">
-        <div className="w-full bg-background p-5 font-mono text-xs sm:text-base sm:p-8">
+        <div className="w-full bg-background p-5 font-mono text-xs sm:p-8 sm:text-base">
           {code.map((line, i) => {
             const isPastLine = i < visibleLines;
             const isCurrentLine = i === visibleLines;

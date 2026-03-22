@@ -1,4 +1,4 @@
-import graduation from "../../assets/images/graduation.jpg";
+import graduation from "../../assets/images/graduation.avif";
 import { motion, type Variants } from "framer-motion";
 import { GraduationCap, MapPin } from "lucide-react";
 

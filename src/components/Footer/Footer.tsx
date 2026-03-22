@@ -27,7 +27,7 @@ const footerLinks = [
 
 const Footer = () => {
   return (
-    <footer className="relative mt-14 -my-4 -mx-8 w-auto overflow-hidden border-y border-white/6 bg-white/1.5 px-4 pb-10 pt-8 sm:-mx-6 sm:px-6 md:-mx-8 md:px-8">
+    <footer className="relative -my-4 -mx-8 w-auto overflow-hidden border-y border-white/6 bg-white/1.5 px-4 pb-10 pt-8 sm:-mx-6 sm:px-6 md:-mx-8 md:px-8">
       <div className="pointer-events-none absolute inset-0">
         <div className="footer-wave footer-wave-one" />
         <div className="footer-wave footer-wave-two" />

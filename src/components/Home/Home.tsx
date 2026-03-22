@@ -124,7 +124,7 @@ const Home = () => {
           variants={heroItem}
           initial="hidden"
           animate="visible"
-          className="mb-3 text-4xl leading-tight font-extrabold sm:text-5xl lg:mb-4 lg:text-7xl"
+          className="mb-3 text-4xl font-extrabold sm:text-5xl lg:mb-4 lg:text-7xl"
         >
           Construindo{" "}
           <motion.span
@@ -163,7 +163,7 @@ const Home = () => {
                   fontWeight: "medium",
                 }}
                 whileTap={{ scale: 0.85 }}
-                className="w-full rounded-xl bg-indigo-500 p-3 text-center text-[11px] tracking-[0.14rem] text-code-props shadow-glow-strong duration-200 sm:text-xs sm:tracking-widest"
+                className="w-full rounded-xl bg-indigo-500 p-3 text-center text-sm tracking-[0.14rem] text-code-props shadow-glow-strong duration-200 sm:text-xs sm:tracking-wider"
                 href={button.link}
                 key={i}
               >

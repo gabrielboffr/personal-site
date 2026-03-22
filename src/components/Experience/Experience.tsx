@@ -54,7 +54,7 @@ const Experience = () => {
   return (
     <section
       id="experiencia"
-      className="relative mt-16 lg:mt-24 overflow-hidden lg:py-24"
+      className="relative mt-16 lg:mt-24 overflow-hidden"
     >
       <div
         aria-hidden
@@ -80,7 +80,7 @@ const Experience = () => {
 
       <div className="relative z-10 mx-auto max-w-7xl px-6">
         <div className="mb-6 text-center lg:mb-14 lg:text-right lg:mr-16 lg:w-max lg:mx-auto">
-          <h2 className="text-4xl font-extrabold bg-clip-text bg-linear-to-l from-white to-blue-600 text-transparent sm:text-5xl lg:text-7xl">
+          <h2 className="text-4xl font-extrabold bg-clip-text bg-linear-to-l from-white to-blue-600 text-transparent sm:text-5xl lg:text-7xl leading-20">
             Minha jornada
           </h2>
           <p className="mt-2 lg:mt-4 text-xs sm:text-xs lg:text-lg text-zinc-400">

@@ -125,10 +125,7 @@ const Contact = () => {
   };
 
   return (
-    <section
-      id="contato"
-      className="relative mt-12 overflow-hidden py-16 sm:mt-16 sm:py-20 lg:mt-24 lg:py-24"
-    >
+    <section id="contato" className="relative overflow-hidden py-16 -mt-16">
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 hidden lg:block"
@@ -155,7 +152,7 @@ const Contact = () => {
           <h2 className="bg-clip-text text-4xl font-extrabold leading-tight text-transparent bg-linear-to-r from-blue-700 to-white sm:text-5xl md:text-6xl lg:text-7xl">
             Vamos conversar
           </h2>
-          <p className="mt-3 text-base text-zinc-400 sm:text-lg">
+          <p className="text-base text-zinc-400 sm:text-lg">
             Me chame para bater um papo sobre produto, desenvolvimento ou novas
             oportunidades.
           </p>

@@ -46,10 +46,7 @@ const stacks = [
   },
 ];
 
-const techIcons: Record<
-  string,
-  ComponentType<{ size?: number; className?: string }>
-> = {
+const techIcons: Record<string, ComponentType<{ className?: string }>> = {
   React: ReactIcon,
   TypeScript: TypeScriptIcon,
   "Tailwind CSS": TailwindCSSIcon,
@@ -70,10 +67,7 @@ const techIcons: Record<
 
 const Tech = () => {
   return (
-    <section
-      id="tecnologias"
-      className="relative mt-12 overflow-hidden py-16 sm:mt-16 sm:py-18 lg:mt-24 lg:py-20"
-    >
+    <section id="tecnologias" className="relative overflow-hidden py-24">
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 hidden lg:block"
@@ -133,7 +127,7 @@ const Tech = () => {
                 <div className="relative z-10">
                   <div className="flex items-center justify-between border-b border-white/10 px-4 py-4 sm:px-5 md:px-6 md:py-5">
                     <div className="flex items-center gap-4">
-                      <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-cyan-300/30 bg-cyan-400/12 text-cyan-200">
+                      <div className="flex min-h-12 min-w-12 items-center justify-center rounded-xl border border-cyan-300/30 bg-cyan-400/12 text-cyan-200">
                         <StackIcon size={23} strokeWidth={2.15} />
                       </div>
                       <div>
@@ -162,7 +156,7 @@ const Tech = () => {
                             className="flex items-center gap-3 rounded-xl border border-white/8 bg-white/5 px-3 py-2"
                           >
                             <span className="inline-flex h-6 min-w-6 items-center justify-center rounded-md text-cyan-200">
-                              <TechIcon size={14} />
+                              <TechIcon className="h-4 w-4 shrink-0" />
                             </span>
                             <span className="text-sm font-medium text-zinc-200">
                               {tech}
