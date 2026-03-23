@@ -105,9 +105,9 @@ const Experience = () => {
               >
                 <div
                   aria-hidden
-                  className="pointer-events-none absolute inset-x-0 inset-y-2 z-0 hidden overflow-hidden rounded-3xl border border-blue-400/4 bg-[linear-gradient(90deg,rgba(34,211,238,0.02),rgba(59,130,246,0.012),rgba(59,130,246,0.02))] opacity-28 lg:block"
+                  className="pointer-events-none absolute inset-x-0 inset-y-2 z-0 hidden overflow-hidden rounded-3xl border border-blue-400/8 bg-[linear-gradient(90deg,rgba(34,211,238,0.028),rgba(59,130,246,0.018),rgba(59,130,246,0.028))] opacity-34 lg:block"
                 >
-                  <div className="absolute inset-0 rounded-3xl bg-[linear-gradient(to_right,rgba(59,130,246,0.015)_1px,transparent_1px),linear-gradient(to_bottom,rgba(59,130,246,0.015)_1px,transparent_1px)] bg-size-[26px_26px]" />
+                  <div className="absolute inset-0 rounded-3xl bg-[linear-gradient(to_right,rgba(59,130,246,0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgba(59,130,246,0.04)_1px,transparent_1px)] bg-size-[26px_26px]" />
 
                   <motion.div
                     className="absolute -left-20 top-1/2 h-56 w-56 -translate-y-1/2 rounded-full bg-cyan-400/7 blur-3xl"

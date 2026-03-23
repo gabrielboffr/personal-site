@@ -1,4 +1,4 @@
-import { Download, GitHub, Gmail, Icon, Linkedin, Send } from "@/assets";
+import { Download, GitHub, Gmail, Logo, Linkedin, Send } from "@/assets";
 import { CodeTyping } from "@/utils/CodeTyping";
 import { motion, type Variants } from "framer-motion";
 
@@ -98,7 +98,7 @@ const Home = () => {
       animationDelay: "0.15s",
     },
     {
-      icon: <Icon className="w-8 h-8" />,
+      icon: <Logo className="w-8 h-8" />,
       link: "#",
       animationDelay: "0.3s",
     },

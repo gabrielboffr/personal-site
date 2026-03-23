@@ -16,67 +16,14 @@ Neste portfólio você vai encontrar:
 - 📚 As tecnologias que mais gosto
 - 💬 Um canal direto para conversar
 
-<<<<<<< HEAD
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-=======
 ---
->>>>>>> 6f5e446 (finishing project)
 
 ## 🛠 Tecnologias Utilizadas
 
-<<<<<<< HEAD
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-=======
 **Frontend:** React, TypeScript, Tailwind CSS, Framer Motion
->>>>>>> 6f5e446 (finishing project)
 
 **Backend:** Node.js, Resend (Envio de Email), Zod (Validação)
 
-<<<<<<< HEAD
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-=======
 ---
 
 ## 🎯 Destaques
@@ -100,4 +47,3 @@ Quer conversar, colaborar ou apenas bater um papo?
 ---
 
 **Desenvolvido com ❤️ por Gabriel Boff Raupp**
->>>>>>> 6f5e446 (finishing project)

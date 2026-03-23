@@ -1,9 +1,9 @@
-import { Icon } from "@/assets";
+import { Logo } from "@/assets";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
-const navItems = ["Sobre", "Experiência", "Tecnologias", "Projetos", "Contato"];
+const navItems = ["Sobre", "Experiência", "Tecnologias", "Contato"];
 
 const getSectionId = (label: string) =>
   label
@@ -70,11 +70,9 @@ const Navbar = () => {
       className="fixed left-0 -my-4 z-50 flex w-full justify-between bg-transparent px-4 py-4 text-slate-100 sm:-mx-6 sm:px-6 md:-mx-8 md:px-8 lg:px-14"
     >
       <a href="#">
-        <Icon
+        <Logo
           height={scrolled ? 30 : 38}
           className="duration-600 md:hover:h-11.5"
-        />
-      </a>
         />
       </a>
 
