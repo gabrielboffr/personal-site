@@ -2,6 +2,8 @@ import { Suspense, lazy } from "react";
 import CustomCursor from "./components/CustomCursor/CustomCursor";
 import Home from "./components/Home/Home";
 import Navbar from "./components/Navbar/Navbar";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 const About = lazy(() => import("./components/About/About"));
 const Experience = lazy(() => import("./components/Experience/Experience"));
@@ -16,6 +18,8 @@ const SectionFallback = () => (
 function App() {
   return (
     <div className="min-h-screen bg-gradient-dark px-4 py-4 sm:px-6 md:bg-fixed md:px-8">
+      <Analytics />
+      <SpeedInsights />
       <CustomCursor />
       <Navbar />
       <Home />

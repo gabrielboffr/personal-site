@@ -91,7 +91,7 @@ const Tech = () => {
 
       <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col gap-9 px-2 sm:gap-10 sm:px-4 lg:gap-12 lg:px-6">
         <div className="mx-auto w-full max-w-3xl text-center">
-          <h2 className="leading-tight text-4xl font-extrabold text-transparent bg-clip-text bg-linear-to-r from-white to-blue-600 sm:text-5xl md:text-6xl lg:text-7xl">
+          <h2 className="leading-normal text-4xl font-extrabold text-transparent bg-clip-text bg-linear-to-r from-white to-blue-600 sm:text-5xl md:text-6xl lg:text-7xl">
             Tecnologias e stacks
           </h2>
           <p className="text-base text-zinc-400 sm:text-lg">

@@ -80,7 +80,7 @@ const Experience = () => {
 
       <div className="relative z-10 mx-auto max-w-7xl px-6">
         <div className="mb-6 text-center lg:mb-14 lg:text-right lg:mr-16 lg:w-max lg:mx-auto">
-          <h2 className="text-4xl font-extrabold bg-clip-text bg-linear-to-l from-white to-blue-600 text-transparent sm:text-5xl lg:text-7xl">
+          <h2 className="text-4xl font-extrabold bg-clip-text bg-linear-to-l from-white to-blue-600 text-transparent sm:text-5xl lg:text-7xl leading-normal">
             Minha jornada
           </h2>
           <p className="mt-2 lg:mt-4 text-base lg:text-lg text-zinc-400">

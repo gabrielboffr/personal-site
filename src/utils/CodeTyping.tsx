@@ -61,7 +61,7 @@ export function CodeTyping({ code }: Props) {
   }
 
   return (
-    <div className="group relative w-full overflow-hidden rounded-3xl border border-white/10 bg-[#050505]/80 shadow-2xl min-h-54.5">
+    <div className="group relative w-full overflow-hidden rounded-3xl border border-white/10 bg-[#050505]/80 shadow-2xl min-h-54.5 lg:min-h-0">
       <div className="flex justify-between h-8 bg-surface p-6">
         <div className="flex gap-2 items-center">
           <div className="rounded-full h-3 w-3 bg-red-400"></div>
