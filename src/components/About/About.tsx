@@ -55,7 +55,7 @@ const About = () => {
   return (
     <section
       id="sobre"
-      className="mx-auto flex w-full max-w-7xl flex-col items-center gap-8 px-2 py-8 sm:px-4 md:gap-10 lg:gap-16"
+      className="mx-auto flex w-full max-w-7xl flex-col items-center gap-8 px-2 my-8 sm:px-4 md:gap-10 lg:gap-16"
     >
       <h1 className="text-center text-4xl font-extrabold bg-clip-text bg-linear-to-r from-white to-blue-600 text-transparent text-shadow-primary-glow text-shadow-8xs sm:text-5xl lg:text-7xl">
         Sobre mim

@@ -245,8 +245,10 @@ const Experience = () => {
                       </h3>
 
                       <div className="mt-3 flex items-center gap-3 text-blue-400">
-                        <Building2 size={18} />
-                        <p className="text-lg  lg:text-xl font-semibold">
+                        <div className="min-h-4.5 min-w-4.5">
+                          <Building2 size={18} />
+                        </div>
+                        <p className="text-base  lg:text-xl font-semibold">
                           {card.company}
                         </p>
                       </div>

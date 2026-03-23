@@ -106,7 +106,7 @@ export default async function handler(req: NodeRequest, res: NodeResponse) {
       to: [contactToEmail],
       subject: `Novo contato do portfolio - ${name}`,
       replyTo: email,
-      text: `Nome: ${name}\nEmail: ${email}\nIP: ${ip}\n\nMensagem:\n${message}`,
+      text: `Nome: ${name}\nEmail: ${email}\n\nMensagem:\n${message}`,
     });
 
     return res.status(200).json({ ok: true });

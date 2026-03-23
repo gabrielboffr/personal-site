@@ -117,8 +117,8 @@ const Contact = () => {
       setCopiedCard(card.title);
 
       window.setTimeout(() => {
-        setCopiedCard((current) => (current === card.title ? null : current));
-      }, 1400);
+        setCopiedCard((current) => (current === card.title ? current : null));
+      }, 100);
     } catch {
       setCopiedCard(null);
     }
