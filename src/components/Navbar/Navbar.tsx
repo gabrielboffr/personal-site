@@ -25,13 +25,7 @@ const Navbar = () => {
   });
 
   useEffect(() => {
-    const sections = sectionIds
-      .map((id) => document.getElementById(id))
-      .filter((section): section is HTMLElement => section !== null);
-
-    if (!sections.length) {
-      return;
-    }
+    const observedSectionIds = new Set<string>();
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -53,9 +47,37 @@ const Navbar = () => {
       },
     );
 
-    sections.forEach((section) => observer.observe(section));
+    const observeAvailableSections = () => {
+      sectionIds.forEach((id) => {
+        if (observedSectionIds.has(id)) {
+          return;
+        }
 
-    return () => observer.disconnect();
+        const section = document.getElementById(id);
+        if (!section) {
+          return;
+        }
+
+        observer.observe(section);
+        observedSectionIds.add(id);
+      });
+    };
+
+    observeAvailableSections();
+
+    const mutationObserver = new MutationObserver(() => {
+      observeAvailableSections();
+    });
+
+    mutationObserver.observe(document.body, {
+      childList: true,
+      subtree: true,
+    });
+
+    return () => {
+      mutationObserver.disconnect();
+      observer.disconnect();
+    };
   }, [sectionIds]);
 
   return (
@@ -95,21 +117,20 @@ const Navbar = () => {
               setActive(getSectionId(item));
               setIsMobileMenuOpen(false);
             }}
-            className={`cursor-pointer relative group px-2 py-1 text-base transition-all duration-400
+            className={`cursor-pointer relative group px-2 py-1 text-base font-medium transition-all duration-400
             ${
               active === getSectionId(item)
-                ? "text-white font-medium"
+                ? "text-white"
                 : "text-slate-300 hover:text-white"
             }`}
           >
             {item}
             <span
-              className={`absolute left-0 h-0.5 block bg-linear-to-r from-indigo-500 to-indigo-900 transition-all duration-400 ${
+              className={`absolute bottom-0 left-0 h-0.5 block bg-linear-to-r from-indigo-500 to-indigo-900 transition-all duration-400 ${
                 active === getSectionId(item)
                   ? "w-full"
                   : "w-0 group-hover:w-full"
               }`}
-              style={{ bottom: scrolled ? "-2px" : "8px" }}
             />
           </a>
         ))}

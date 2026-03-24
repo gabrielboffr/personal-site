@@ -114,7 +114,7 @@ const Home = () => {
       variants={heroContainer}
       initial="hidden"
       animate="visible"
-      className="mx-auto flex w-full max-w-7xl flex-col items-center justify-center gap-8 bg-transparent px-4 mt-16 mb-16 text-slate-100 sm:px-6 md:px-10 lg:h-screen lg:w-5/6 lg:flex-row lg:gap-12"
+      className="mx-auto flex w-full max-w-7xl flex-col items-center justify-center gap-8 bg-transparent px-4 mt-16 lg:mt-0 mb-16 text-slate-100 sm:px-6 md:px-10 lg:h-screen lg:w-5/6 lg:flex-row lg:gap-12"
     >
       <div className="order-2 flex w-full flex-col gap-2 lg:order-1 lg:flex-1">
         <div className="w-fit rounded-2xl border border-blue-500/50 bg-transparent px-4 py-1.5 text-nowrap text-xs font-semibold tracking-widest lg:tracking-[0.2rem] text-primary-soft shadow-glow mx-auto sm:mx-0">
