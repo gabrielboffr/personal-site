@@ -47,7 +47,7 @@ const aboutCards = [
     title: "Localização",
     label: "Onde estou",
     icon: MapPin,
-    tags: ["Três Cachoeiras, Brasil", "Criciúma, Brasil", "Remoto"],
+    tags: ["Criciúma, Brasil", "Remoto"],
   },
 ];
 
@@ -102,14 +102,15 @@ const About = () => {
               </span>
               , estudante de{" "}
               <span className="font-bold">Engenharia de Software</span> e
-              desenvolvedor fullstack em formação. Meu interesse por tecnologia
-              começou ainda quando criança, quando tive meus primeiros problemas
-              com o computador e passei a me perguntar como tudo aquilo
-              funcionava. A curiosidade em entender melhor o hardware me levou
-              ao meu primeiro emprego em uma informática local. Foi assim que
-              comecei a me aproximar da tecnologia e, mais tarde, a enxergar na
-              programação não apenas uma área de estudo, mas também uma forma de
-              construir soluções e dar vida a ideias.
+              desenvolvedor fullstack em formação. Minha trajetória na
+              tecnologia começou ainda na infância, movida pela curiosidade em
+              entender como computadores e sistemas funcionavam. Hoje, vivo uma
+              nova etapa dessa trajetória, realizando um sonho, que é trabalhar
+              em uma empresa de software e, para isso, me mudei de cidade e
+              passei a morar sozinho. Ao mesmo tempo, curso Engenharia de
+              Software, unindo minha formação acadêmica à experiência prática no
+              mercado e buscando evoluir constantemente como profissional de
+              tecnologia.
             </p>
           </motion.div>
           <div className="w-full">

@@ -9,6 +9,19 @@ import {
 const Experience = () => {
   const cards = [
     {
+      title: "Analista de Suporte Júnior",
+      description: [
+        "Análise e Manutenção de Integrações",
+        "Desenvolvimento de Automações",
+        "Análise de Processos",
+        "Documentação Técnica",
+        "Treinamento de Usuários",
+        "Relacionamento Técnico com Clientes",
+      ],
+      company: "Proxpect - Criciúma/SC",
+      date: "ago/2026 - presente",
+    },
+    {
       title: "Assistente de T.I",
       description: [
         "Suporte ao Usuário de Informática (interno)",
@@ -20,7 +33,7 @@ const Experience = () => {
         "Desenvolvimento de Dashboards de PowerBI para Análise de Dados",
       ],
       company: "Cooperliquidos - Três Cachoeiras/RS",
-      date: "out/2023 - presente",
+      date: "out/2023 - ago/2026",
     },
     {
       title: "Desenvolvedor Full Stack (foco em Front-end)",
